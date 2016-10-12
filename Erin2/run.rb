@@ -9,5 +9,23 @@ end
 
 get '/states' do
   # code!
+  @states = []
+  @state = {'id' => 'CA', 'name' => 'California'} 
+  @states << @state
+
+  @state = {'id' => 'OR', 'name' => 'Oregon'}
+  @states << @state
+
+  @state = {'id' => 'IN', 'name' => 'Indiana'}
+  @states << @state
+
+  @state = {'id' => 'WA', 'name' => 'Washington'}
+  @states << @state
+
+  @state = {'id' => 'NJ', 'name' => 'New Jersey'}
+  @states << @state 
+
+  @states.sort_by! { |h| h['name']}
+
   erb :states, layout: :main
 end

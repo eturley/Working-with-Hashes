@@ -4,3 +4,12 @@
 
 <!-- iterate through each state in the array and put them into list items individually -->
 
+<select>
+	<% @states.each do | s | %>
+		<% if s['id'] == 'CA' %>
+		<option value= <%= s['id'] %> selected> <%= s['name'] %></option>
+		<% else %>
+		<option value= <%= s['id'] %> > <%= s['name'] %></option>
+		<% end %>
+	<%end%>
+</select>

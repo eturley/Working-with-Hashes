@@ -9,21 +9,22 @@ end
 
 get '/states' do
   # code!
+  # jarp: "state" does not need to be an instance variable (no need for the @). It's not used anywhere else
   @states = []
-  @state = {'id' => 'CA', 'name' => 'California'} 
-  @states << @state
+  state = {'id' => 'CA', 'name' => 'California'}
+  @states << state
 
-  @state = {'id' => 'OR', 'name' => 'Oregon'}
-  @states << @state
+  state = {'id' => 'OR', 'name' => 'Oregon'}
+  @states << state
 
-  @state = {'id' => 'IN', 'name' => 'Indiana'}
-  @states << @state
+  state = {'id' => 'IN', 'name' => 'Indiana'}
+  @states << state
 
-  @state = {'id' => 'WA', 'name' => 'Washington'}
-  @states << @state
+  state = {'id' => 'WA', 'name' => 'Washington'}
+  @states << state
 
-  @state = {'id' => 'NJ', 'name' => 'New Jersey'}
-  @states << @state 
+  state = {'id' => 'NJ', 'name' => 'New Jersey'}
+  @states << state
 
   @states.sort_by! { |h| h['name']}
 
